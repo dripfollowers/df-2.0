@@ -1,0 +1,12 @@
+{
+	"require" : {
+		"monolog/monolog" : "*",
+		"mike182uk/paypal-ipn-listener" : "*",
+		"nesbot/Carbon" : "*"
+	},
+	"autoload" : {
+		"psr-0" : {
+			"DripFollowers\\" : "src/"
+		}
+	}
+}

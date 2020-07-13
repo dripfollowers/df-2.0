@@ -1,0 +1,15 @@
+input.large-text {
+	width: 50em;
+}
+
+input.regular-text {
+	width: 25em;
+}
+
+input.small-text {
+	width: 10em;
+}
+
+input.tiny-text {
+	width: 5em;
+}
