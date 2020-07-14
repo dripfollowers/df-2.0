@@ -1,0 +1,32 @@
+{
+    "name": "mike182uk/paypal-ipn-listener",
+    "type": "library",
+    "description": "PayPal IPN listener for PHP >=5.4.0",
+    "keywords": ["paypal", "ipn"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael David Barrett",
+            "email": "mike182uk@gmail.com"
+        }
+    ],
+    "require" : {
+        "php": ">=5.4.0",
+        "guzzlehttp/guzzle": "~5.2",
+        "symfony/event-dispatcher": "~2.6"
+    },
+    "require-dev" : {
+        "phpspec/phpspec": "~2.1",
+        "behat/behat": "~3.0",
+        "beberlei/assert": "~2.0",
+        "fabpot/php-cs-fixer": "~1.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "Mdb\\PayPal\\Ipn\\": "src/"
+        }
+    },
+    "config": {
+        "bin-dir" : "bin"
+    }
+}

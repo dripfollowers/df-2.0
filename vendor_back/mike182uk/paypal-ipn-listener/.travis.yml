@@ -1,0 +1,34 @@
+language: php
+
+php:
+  - 5.4
+  - 5.5
+  - 5.6
+  - 7.0
+  - hhvm
+
+env:
+  - MOCK_SERVER_PORT=3000
+
+before_install:
+  - sudo apt-get update
+  - travis_retry sudo apt-get install -y nodejs
+  - pushd $TRAVIS_BUILD_DIR/features/bootstrap/server
+  - travis_retry npm install
+  - nohup node server.js &
+  - popd
+
+before_script:
+  - travis_retry composer self-update
+  - travis_retry composer install --no-interaction --prefer-source
+
+script:
+  - bin/php-cs-fixer fix --dry-run --verbose
+  - bin/phpspec run -fprogress
+  - bin/behat -fprogress
+
+matrix:
+  allow_failures:
+    - php: hhvm
+    - php: 7.0
+  fast_finish: true

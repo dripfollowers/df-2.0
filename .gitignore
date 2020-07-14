@@ -1,10 +1,10 @@
 #composer files
 
-composer.phar
-/vendor/
-/vendor_back/
+# composer.phar
+# /vendor/
+# /vendor_back/
 
 
 # plugin files
 
-/log/
+# /log/
